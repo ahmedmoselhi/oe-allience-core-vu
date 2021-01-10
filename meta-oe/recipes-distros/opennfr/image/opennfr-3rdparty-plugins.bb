@@ -9,7 +9,7 @@ inherit gitpkgv deploy
 SRCREV = "${AUTOREV}"
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"
-PR = "r39"
+PR = "r40"
 SRC_URI="git://github.com/carlo0815/3rdparty-plugins.git;protocol=git;branch=4.4"
 
 EXTRA_OECONF = " \
@@ -54,6 +54,20 @@ do_deploy_append() {
     if [ $Z1 -gt 0 ]; then
         install -m 0644 ${S}/*${MACHINE}.ipk ${DEPLOY_DIR_IPK}/${MACHINE} #|| true
     fi 
+    Z1=$(ls -1 ${S}/enigma2-plugin-extensions-opkg-tools_1.4_mips32el.ipk | wc -l)
+    if [ $Z1 -gt 0 ]; then
+        install -m 0644 ${S}/enigma2-plugin-extensions-opkg-tools_1.4_mips32el.ipk ${DEPLOY_DIR_IPK}/mips32el #|| true
+    fi 
+    Z1=$(ls -1 ${S}/enigma2-plugin-extensions-opkg-tools_1.4_cortexa15hf-neon-vfpv4.ipk | wc -l)
+    if [ $Z1 -gt 0 ]; then
+        install -m 0644 ${S}/enigma2-plugin-extensions-opkg-tools_1.4_cortexa15hf-neon-vfpv4.ipk ${DEPLOY_DIR_IPK}/cortexa15hf-neon-vfpv4 #|| true
+    fi 
+
+    if [ ! -e "${DEPLOY_DIR_IPK}/3rdparty/enigma2-plugin-extensions-opkg-tools*" ]
+    then
+	rm -rf ${DEPLOY_DIR_IPK}/3rdparty/enigma2-plugin-extensions-opkg-tools*
+    fi
+
     pkgdir=${DEPLOY_DIR_IPK}/3rdparty
     if [ -e $pkgdir ]; then
         chmod 0755 $pkgdir

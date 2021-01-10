@@ -7,7 +7,7 @@ ALLOW_EMPTY_${PN} = "1"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PV = "1.0"
-PR = "r03"
+PR = "r04"
 
 inherit packagegroup
 
@@ -16,16 +16,13 @@ RRECOMMENDS_${PN} = "\
     cdfs \
     opennfr-3rdparty-plugins \
     oe-alliance-skins \
-    enigma2-display-skins \
     openatv-picons-meta \
-    enigma2-skins \
     enigma2-pliplugins \
     enigma2-plugin-extensions-project-valerie \
     enigma2-plugin-extensions-epgimport \
     curlftpfs \
     enigma2-plugin-extensions-enhancedmoviecenter \
     enigma2-plugin-extensions-cooltvguide \
-    enigma2-plugin-extensions-webinterface-nfrmod \
     enigma2-plugin-extensions-bmediacenter \
     enigma2-plugin-extensions-mainmenu2 \
     enigma2-plugin-skincomponents-bmediacenter-ax-blue-skin \
@@ -43,6 +40,17 @@ RRECOMMENDS_${PN} = "\
     enigma2-plugin-opennfrskins-smoke-light-hd \
     enigma2-plugin-opennfrskins-sphere-fhd-4nfr \
     enigma2-plugin-opennfrskins-multibox-fhd-4nfr \
+    enigma2-plugin-opennfrskins-ultimate-hd-4nfr \
+    enigma2-plugin-opennfrskins-steampunk-hd-skin-4nfr \
     enigma2-plugin-skins-anadol \
     enigma2-plugin-extensions-vmc \
-" 
+    enigma2-plugin-extensions-gbipboxclient \
+    " 
+
+RRECOMMENDS_${PN}_append_gb800solo = "enigma2-plugin-extensions-gbipboxclient"
+RRECOMMENDS_${PN}_append_gb7325 = "enigma2-plugin-extensions-gbipboxclient"
+RRECOMMENDS_${PN}_append_gb7358 = "enigma2-plugin-extensions-gbipboxclient"
+RRECOMMENDS_${PN}_append_gb7362 = "enigma2-plugin-extensions-gbipboxclient"
+RRECOMMENDS_${PN}_append_gb73625 = "enigma2-plugin-extensions-gbipboxclient"
+RRECOMMENDS_${PN}_append_gb7356 = "enigma2-plugin-extensions-gbipboxclient"
+RRECOMMENDS_${PN}_append_gb7252 = "enigma2-plugin-extensions-gbipboxclient"

@@ -63,7 +63,6 @@ RRECOMMENDS_${PN} = "\
     openeight-version-info \
     enigma2-plugin-pli-softcamsetup \
     enigma2-plugin-extensions-mediaplayer \
-    enigma2-plugin-extensions-autobackup \
     enigma2-plugin-extensions-autotimer \
     enigma2-plugin-extensions-graphmultiepg \
     enigma2-plugin-extensions-cutlisteditor \

@@ -22,6 +22,10 @@ S="${WORKDIR}/git"
 do_install() {
     mkdir -p ${D}/etc/enigma2
     cp -rp ${S}/etc/enigma2/* ${D}/etc/enigma2
+    for f in subservices.xml
+    do
+        install -m 755 ${f} ${D}/etc/enigma2/${f}
+    done
     install -d ${D}/etc/init.d
     for f in swap
     do

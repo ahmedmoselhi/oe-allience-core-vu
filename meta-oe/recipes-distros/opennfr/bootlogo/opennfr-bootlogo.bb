@@ -36,18 +36,21 @@ SRC_URI_append_7100s = "file://lcdsplash220.bin file://lcdwaitkey220.bin file://
 SRC_URI_append_7210s = "file://lcdsplash220.bin file://lcdwaitkey220.bin file://lcdwarning220.bin file://lcdcomplete220.bin"
 SRC_URI_append_7105s = "file://lcdsplash220.bin file://lcdwaitkey220.bin file://lcdwarning220.bin file://lcdcomplete220.bin"
 SRC_URI_append_7215s = "file://lcdsplash220.bin file://lcdwaitkey220.bin file://lcdwarning220.bin file://lcdcomplete220.bin"
+SRC_URI_append_8100s = "file://lcdwarning220.bin"
 SRC_URI_append_dags7356 = "file://splash1.bmp file://splash1_os1.bmp file://splash1_os2.bmp file://splash2.bmp file://splash3.bmp"
 SRC_URI_append_dags7362 = "file://splash1_power.bmp file://splash1_os1.bmp file://splash1_os2.bmp file://splash2.bmp file://splash3.bmp"
 SRC_URI_append_dags73625 = "file://splash1_rc.bmp file://splash1_power.bmp file://splash1_os1.bmp file://splash1_os2.bmp file://splash2.bmp file://splash3.bmp"
 SRC_URI_append_dags72604 = "file://splash1_rc.bmp"
 SRC_URI_append_dags7252 = "file://splash1_rc.bmp"
 SRC_URI_append_h9 = "file://logo.img"
+SRC_URI_append_h9combo = "file://logo.img"
 SRC_URI_append_i55plus = "file://logo.img"
 SRC_URI_append_hd60 = "file://logo.img"
 SRC_URI_append_hd61 = "file://logo.img"
 SRC_URI_append_multibox = "file://logo.img"
 SRC_URI_append_cc1 = "file://logo.img"
 SRC_URI_append_sf8008 = "file://logo.img"
+SRC_URI_append_sf8008m = "file://logo.img"
 SRC_URI_append_ustym4kpro = "file://logo.img"
 SRC_URI_append_gbmv200 = "file://logo.img"
 
@@ -121,6 +124,11 @@ do_install_append_7215s() {
     install -m 0644 lcdwaitkey220.bin ${D}/usr/share/lcdwaitkey.bin
     install -m 0644 lcdwarning220.bin ${D}/usr/share/lcdwarning.bin
     install -m 0644 lcdcomplete220.bin ${D}/usr/share/lcdcomplete.bin
+}
+
+do_install_append_8100s() {
+    install -d ${D}/usr/share
+    install -m 0644 lcdwarning220.bin ${D}/usr/share/lcdflashing.bmp
 }
 
 inherit deploy

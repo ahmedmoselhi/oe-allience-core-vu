@@ -11,14 +11,13 @@ PR = "r40"
 
 inherit packagegroup
 
-DEPENDS = "opennfr-feeds opennfr-3rdparty-plugins 3rd-party-feed-configs"
+DEPENDS = "opennfr-feeds opennfr-3rdparty-plugins 3rd-party-feed-configs lzo"
 
 RDEPENDS_${PN} = "\
     enigma2-plugin-extensions-autotimer \
     enigma2-plugin-extensions-epgsearch \
     enigma2-plugin-extensions-mediaplayer \
     enigma2-plugin-extensions-cutlisteditor \
-    enigma2-plugin-extensions-menusort \
     enigma2-plugin-extensions-infopanel \
     enigma2-plugin-extensions-fileload \
     enigma2-plugin-extensions-nfr4xboot \

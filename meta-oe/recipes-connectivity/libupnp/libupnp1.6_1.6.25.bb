@@ -8,7 +8,7 @@ HOMEPAGE = "http://pupnp.sourceforge.net/"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=b3190d5244e08e78e4c8ee78544f4863"
 
-SRC_URI = "${SOURCEFORGE_MIRROR}/pupnp/libupnp-${PV}.tar.bz2 \
+SRC_URI = "https://sources.voidlinux.org/libupnp-${PV}/libupnp-${PV}.tar.bz2 \
            file://sepbuildfix.patch \
 "
 
