@@ -30,7 +30,6 @@ RDEPENDS_${PN} = " \
     network-usb-drivers-meta \
     channelsettings-enigma2-meta \
     picons-enigma2-meta \
-    meta-enigma2-dvdburn \
     enigma2-plugins \
     enigma2-plugin-drivers-ntfs-3g \
     enigma2-plugin-drivers-exfat \
@@ -68,7 +67,6 @@ RDEPENDS_${PN} = " \
     ${@bb.utils.contains("MACHINE_FEATURES", "vuglesdemo", "enigma2-plugin-extensions-libvupldemo", "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "vustalker", "enigma2-plugin-extensions-stalkerclient", "", d)} \
     ${@bb.utils.contains("MACHINE_FEATURES", "wifi-direct", "wds", "", d)} \
-    ${@bb.utils.contains("MACHINE_FEATURES", "dvd", "bdremux replex mjpegtools dvdauthor dvd+rw-tools cdrkit cdfs cdtextinfo enigma2-plugin-extensions-cdinfo enigma2-plugin-extensions-dvdburn enigma2-plugin-extensions-dvdplayer ${GST_BASE_DVD}", "", d)} \
     autofs \
     autossh \
     ${@bb.utils.contains("DISTRO_FEATURES", "directfb", "avahi-ui", "", d)} \
@@ -81,7 +79,6 @@ RDEPENDS_${PN} = " \
     dosfstools \
     dvblast \
     dvbsnoop \
-    dvdfs \
     ${@bb.utils.contains('MACHINE', 'cube', '' , 'edid-decode', d)} \
     exfat-utils \
     fuse-exfat \

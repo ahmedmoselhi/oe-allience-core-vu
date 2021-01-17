@@ -48,4 +48,5 @@ RDEPENDS_${PN} = "\
     ", d)} \
     packagegroup-base-smbfs-client \
     ofgwrite \
+    ${@bb.utils.contains_any("MACHINE_FEATURES", "kodi18 kodi19", "kodi-addons-meta enigma2-plugin-extensions-kodi", "", d)} \
     "
